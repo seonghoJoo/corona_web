@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/form.css" />
+</head>
+<body>
+	<%@ include file="/WEB-INF/template/header.jsp" %>
+	<h2><i class="fas fa-pencil-alt"></i> 확진자 추가하기</h2>
+	<form method="post" action="/write.bmj">
+		<fildset>
+			<legend class="screen_out">글쓰기 폼</legend>
+			<div>
+				<label class="title" for="place">작성자</label>
+				<input type="text" class="writer" name="place"
+				 placeholder="작성자를 입력"/>
+			</div>
+			
+			<div>
+				<label class="title"  for="contents">내 용</label>
+				<textarea class="contents" name="contents"
+				placeholder="내용 입력"
+				 cols="50" rows="5"></textarea>
+			</div>
+			
+			<div class="btn_box">
+				<button class="btn" type="reset"><i class="fas fa-retweet"></i> 리 셋</button>
+				<button class="btn" type="submit"><i class="fas fa-pencil-alt"></i> 글쓰기</button>
+				<a class="btn" href="/index.jsp"><i class="fa fa-arrow-left "></i> 게시판으로</a>
+			</div>
+		</fildset>
+	</form>
+</body>
+</html>

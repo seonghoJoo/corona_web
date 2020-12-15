@@ -1,0 +1,5 @@
+package org.corona.filter;
+
+public class EncodingFilter {
+
+}

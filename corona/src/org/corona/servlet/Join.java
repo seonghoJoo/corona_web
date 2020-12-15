@@ -1,0 +1,41 @@
+package org.corona.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
+import org.corona.dao.MembersDAO;
+import org.corona.vo.Member;
+
+@WebServlet("/join.bmj")
+public class Join extends HttpServlet{
+   @Override
+   protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
+      String id = req.getParameter("id");
+      String pwd = req.getParameter("password");
+      String nickname = req.getParameter("nickname");
+      
+      
+      Member member = new Member(id,pwd,nickname);
+      
+      Member loginMember = MembersDAO.selectLogin(member);
+      
+      if(loginMember == null) {
+         int result =  MembersDAO.insertMember(member);
+         // 회원가입 가능
+         HttpSession session = req.getSession();
+         session.setAttribute("msg",id);
+         resp.sendRedirect("/index.jsp");
+      }else{
+    	  System.out.println("회원가입불가");
+         // 회원가입 불가
+         resp.sendRedirect("/join.jsp");
+      }
+   }
+}

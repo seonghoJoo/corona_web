@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\BMJ\workspace\corona\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2452759471.index
+704387277.index
+2943169080.index
+1229952616.index
+771714225.index
+83366469.index

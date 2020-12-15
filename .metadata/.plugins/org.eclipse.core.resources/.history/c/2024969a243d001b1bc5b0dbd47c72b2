@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+#content h2 {
+	font-size:32px;
+	color:#424242;
+	margin:20px 0;
+	font-weight:700;
+}
+
+#content .title {
+	width:90px;
+	display: inline-block;
+	height:40px;
+	font-size:21px;
+	line-height:40px;
+	text-align: right;
+	vertical-align: middle;
+	color:#424242;
+	font-weight: 200;
+}
+
+.input1 {
+	vertical-align: top;
+	font-family:"Noto Sans KR",sans-serif;
+	font-size:25px;
+	width:575px;
+	padding:10px;
+	border:1px solid #2196f3;;
+	/*
+	 * textarea크기 변경 못하게
+	 */
+	resize: none;
+	margin-left:5px;
+	vertical-align: middle;
+}
+
+.input1:focus {
+	border-color:#424242;;
+	background:#efefef;
+	outline:2px solid #424242;
+}
+.emotion * {
+	vertical-align: middle;
+}
+
+:checked+i {
+	color:#283593;
+}

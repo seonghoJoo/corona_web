@@ -1,0 +1,5 @@
+package org.corona.servlet;
+
+public class Delete {
+
+}

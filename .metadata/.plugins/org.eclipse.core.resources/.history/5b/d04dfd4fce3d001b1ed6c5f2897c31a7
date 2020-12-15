@@ -1,0 +1,44 @@
+package org.corona.servlet;
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+@WebServlet("/write.bmj")
+public class Insert extends HttpServlet {
+	
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+		String place = req.getParameter("place");
+		String address = req.getParameter("address");
+		String city = req.getParameter("city");
+		String gu = req.getParameter("gu");
+		
+		//double
+		String latitudeStr = req.getParameter("latitude");
+		String longititudeStr = req.getParameter("longititude");
+		Double latitude = Double.parseDouble("latitudeStr");
+		Double longititude = Double.parseDouble("longititudeStr");
+		
+		//char
+		String maskStr = req.getParameter("mask");
+		
+		//int
+		String numStr = req.getParameter("num");
+		String startYearStr = req.getParameter("startYear");
+		String startMonthStr = req.getParameter("startMonth");
+		String startDateStr = req.getParameter("startDay");
+		String endYearStr = req.getParameter("endYear");
+		String endMonthStr = req.getParameter("endMonth");
+		String endDateStr = req.getParameter("endDay");
+		
+		
+		
+		
+		
+	}
+}
